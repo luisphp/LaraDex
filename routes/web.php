@@ -42,8 +42,18 @@ Route::get('/name/{name}/last_name/{l_n?}',function($name, $l_n = 'salvaje'){
 
 // otra forma de definir datos dinamicos se pueden definir rutas de la siguiente forma
 
+
+/*
 Route::get('/usuario/{id}',function($id){
 	return 'Hola usuario '.$id;
 });
 
+*/
+
 //Para reestringir el funcionamiento de una ruta puedes usar el metodo ->where, por ejemplo para 
+
+Route::get('/usuario/{id}',function($id){
+	return 'Hola usuario '.$id;
+})->where('id', '[0-9]+');
+
+//Aca se esta especificando que el Id de esta ruta solo puede contener numeros
