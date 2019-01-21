@@ -63,4 +63,11 @@ Route::get('/usuario/{id}',function($id){
 //Nexo entre La ruta y el controlador.
 //Este controlador basico esta en TestControllerPrueba en la carpeta App/Http/Controllers
 
-Route::get('prueba','TestController@prueba');
+Route::get('/prueba','TestController@prueba');
+
+//Para pasar parametros, se hace de la siguiente forma
+Route::get('/prueba/{nombre}','TestController@saludo');
+
+
+//Para acceder a un controlador de tipo resource 
+Route::resource('trainer','TrainerController');
