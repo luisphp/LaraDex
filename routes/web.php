@@ -71,3 +71,4 @@ Route::get('/prueba/{nombre}','TestController@saludo');
 
 //Para acceder a un controlador de tipo resource 
 Route::resource('trainer','TrainerController');
+
