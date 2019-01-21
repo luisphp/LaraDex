@@ -60,4 +60,7 @@ Route::get('/usuario/{id}',function($id){
 //Test Commit
 
 
-//Go to push
+//Nexo entre La ruta y el controlador.
+//Este controlador basico esta en TestControllerPrueba en la carpeta App/Http/Controllers
+
+Route::get('prueba','TestController@prueba');
