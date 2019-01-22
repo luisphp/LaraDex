@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+@extends('layouts.app')
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-</head>
 
-<body>
-	<h1> Cargar entrenador </h2>
+@section('title', 'Trainers Create')
+
+@section('content')
+
+<h1> Cargar entrenador </h2>
 
 
 <form class="form-horizontal margin-top 1-2" action="/action_page.php">
@@ -30,7 +27,7 @@
     </div>
   </div>
 
-	
+  
   </div>
   <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
@@ -38,6 +35,12 @@
     </div>
   </div>
 </form>
+
+@endsection
+
+
+
+	
 
 
 
