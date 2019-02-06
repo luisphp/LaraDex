@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/template1', function () {
+    return view('template_sencillo_bootstrap');
+});
+
+Route::get('/template2', function () {
+    return view('template_portafolio_bootstrap');
+});
+
 Route::get('/primerruta',function(){
 	return 'Hola';
 });

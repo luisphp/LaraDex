@@ -36,7 +36,14 @@ class TrainerController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        //Mediante la utilizacion del este metodo $request->all(); podemo ver toda la informacion que enviamos.
+        
+        //return $request->all();
+
+
+        //Mediante la utilizacion de este metodo podemos obtener solo 1 valor en especifico o mas de los que se envia desde el formulario
+
+        return $request->input('nombre');
     }
 
     /**
