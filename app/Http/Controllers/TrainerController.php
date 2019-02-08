@@ -43,7 +43,8 @@ class TrainerController extends Controller
 
         //Mediante la utilizacion de este metodo podemos obtener solo 1 valor en especifico o mas de los que se envia desde el formulario
 
-        return $request->input('nombre');
+    
+        return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
     }
 
     /**
