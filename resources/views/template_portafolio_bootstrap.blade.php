@@ -98,7 +98,9 @@
 </div><br><br>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+
+  <p>Plantilla para el portafolio Luis Hurtado.</p>
+
 </footer>
 
 </body>
