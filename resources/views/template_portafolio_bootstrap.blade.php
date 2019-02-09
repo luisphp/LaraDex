@@ -99,7 +99,7 @@
 
 <footer class="container-fluid text-center">
 
-  <p>Plantilla para el portafolio Luis Hurtado. </p>
+  <p aling="center">Plantilla para el portafolio Luis Hurtado. </p>
   <br>
     <p>CopyRight</p>
 </footer>
