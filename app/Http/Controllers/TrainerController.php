@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Trainer;
 
 class TrainerController extends Controller
 {
@@ -44,7 +45,15 @@ class TrainerController extends Controller
         //Mediante la utilizacion de este metodo podemos obtener solo 1 valor en especifico o mas de los que se envia desde el formulario
 
     
-        return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
+       // return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
+
+
+        $trainer = new Trainer();
+        $trainer->name = $request->input('nombre');
+        $trainer->email = $request->input('correo');
+        $trainer->save();
+
+        return 'Saved';
     }
 
     /**

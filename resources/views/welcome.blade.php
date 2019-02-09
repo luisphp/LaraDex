@@ -81,16 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    LaraDex
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="./trainer">Index Trainers</a>
+                    <a href="./trainer/create">Crear Trainer</a>
+                    <a href="">En desarrollo 2</a>
+                    <a href="">En desarrollo 3</a>
+                    <a href="https://github.com/luisphp">GitHub Luis PHP</a>
                 </div>
             </div>
         </div>
