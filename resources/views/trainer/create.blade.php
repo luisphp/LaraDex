@@ -18,7 +18,7 @@
 
 
 
-<form class="form-group" method="POST" action="../trainer">
+<form class="form-group" method="POST" action="../trainer" enctype="multipart/form-data">
 
 
 	@csrf
@@ -29,40 +29,64 @@
     <label class="control-label col-sm-2" for="name">Nombre</label>
 
 
-    <div class="col-sm-10">
+        <div class="col-sm-10">
 
 
-      <input type="text" class="form-control" placeholder="Ingrese Nombre" name="nombre">
+          <input type="text" class="form-control" placeholder="Ingrese Nombre" name="nombre">
 
 
+        </div>
     </div>
-    </div>
 
 
-  <div class="form-group">
+      <div class="form-group">
 
-    
-    <label class="control-label col-sm-1" for="correo">Correo</label>
+        
+        <label class="control-label col-sm-1" for="correo">Correo</label>
 
-    <div class="col-sm-10"> 
+            <div class="col-sm-10"> 
 
-      <input type="text" class="form-control" name="correo" placeholder="Ingrese Correo">
+              <input type="text" class="form-control" name="correo" placeholder="Ingrese Correo">
 
-    </div>
-  </div>
+            </div>
+      </div>
+
+      <div class="form-group">
+
+        
+        <label class="control-label col-sm-1" for="avatar">Avatar</label>
+
+            <div class="col-sm-10"> 
+
+              <input type="text" class="form-control" name="avatar" placeholder="Link de la Imagen">
+
+            </div>
+      </div>
+
+      <div class="form-group">
+
+        
+        <label class="control-label col-sm-2" for="subir-avatar">Subir Avatar</label>
+
+        <div class="col-sm-10"> 
+
+          <input type="file" name="subir-avatar">
+
+        </div>
+      </div>
 
   
 
   
-  <div class="form-group"> 
+      <div class="form-group"> 
 
-    <div class="col-sm-offset-2 col-sm-1">
+        <div class="col-sm-offset-2 col-sm-1">
 
-      <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="submit" class="btn btn-primary">Guardar</button>
 
 
-    </div>
-  </div>
+        </div>
+
 </form>
 
 @endsection

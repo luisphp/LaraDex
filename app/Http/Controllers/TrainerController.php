@@ -15,8 +15,10 @@ class TrainerController extends Controller
     public function index()
     {
         //
-        return 'Probando funcionamiento del controlador Trainers de tipo resource';
-    }
+
+        $trainers = Trainer::all();
+
+        return view ('trainer.index', compact('trainers'));    }
 
     /**
      * Show the form for creating a new resource.
@@ -48,12 +50,26 @@ class TrainerController extends Controller
        // return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
 
 
-        $trainer = new Trainer();
-        $trainer->name = $request->input('nombre');
-        $trainer->email = $request->input('correo');
-        $trainer->save();
 
-        return 'Saved';
+            /*
+                    $trainer = new Trainer();
+                    $trainer->name = $request->input('nombre');
+                    $trainer->email = $request->input('correo');
+                    $trainer->avatar = $request->input('avatar')
+                    $trainer->save();
+
+                    return 'Saved';
+
+            */
+
+
+                  if($request->hasFile('subir-avatar')){
+                    $file = $request->file('subir-avatar');
+                    $name = sha1(time());
+                    $file->move(public_path(),'/images/',$name);
+                    
+                  }
+                  return $name;
     }
 
     /**
