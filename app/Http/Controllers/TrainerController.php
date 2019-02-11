@@ -51,25 +51,26 @@ class TrainerController extends Controller
 
 
 
-            /*
-                    $trainer = new Trainer();
-                    $trainer->name = $request->input('nombre');
-                    $trainer->email = $request->input('correo');
-                    $trainer->avatar = $request->input('avatar')
-                    $trainer->save();
+            
+                    
 
-                    return 'Saved';
-
-            */
+            
 
 
                   if($request->hasFile('subir-avatar')){
                     $file = $request->file('subir-avatar');
                     $name = sha1(time());
-                    $file->move(public_path(),'/images/',$name);
+                    $file->store('images');
                     
                   }
-                  return $name;
+
+                  $trainer = new Trainer();
+                    $trainer->name = $request->input('nombre');
+                    $trainer->email = $request->input('correo');
+                    $trainer->avatar = $request->$name;
+                    $trainer->save();
+
+                    return 'Saved';
     }
 
     /**
