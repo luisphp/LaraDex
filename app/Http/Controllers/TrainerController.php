@@ -50,13 +50,6 @@ class TrainerController extends Controller
        // return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
 
 
-
-            
-                    
-
-            
-
-
                   if($request->hasFile('subir-avatar')){
                     $file = $request->file('subir-avatar')->store('public');;
                     //$name = sha1(time());
@@ -64,6 +57,7 @@ class TrainerController extends Controller
                   }
 
                   $trainer = new Trainer();
+                  
                     $trainer->name = $request->input('nombre');
                     $trainer->email = $request->input('correo');
                     $trainer->avatar = $file;
@@ -85,6 +79,10 @@ class TrainerController extends Controller
     public function show($id)
     {
         //
+
+        $detalles = Trainer::find($id);
+
+        return view ('trainer.trainer_details', compact('detalles'));
     }
 
     /**

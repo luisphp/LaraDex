@@ -6,34 +6,34 @@
 
 @section('content')
 
-	<h1 align="center"> Lista de Entrenadores </h1>
+	<h1 style="margin-top: 20px" align="center"> Lista de Entrenadores </h1>
 
-	<br>
-	<br>
 
 	@if (count($trainers)=== 0)
 
-	<h5 align="center">No se han añadido entrenadores</h5>
+	<h5 style="margin-top: 20px" align="center">No se han añadido entrenadores</h5>
 
 		@else
 
-			<div class="row">
+			<div  style="margin-top: 20px" class="row">
 
 
 				@foreach($trainers as $entrenador)
 
 			
 			
-				<div class="col-sm" align="center">
+				<div class="col-sm" style="margin: 20px" align="center">
 
-						<div class="card" style="width: 18rem;">
+						<div class="card text-center" style="width: 18rem;">
 
 							  		<div class="card-body" align="center">
-							  			<img src="localhost/laradex/storage/app/{{$entrenador->avatar}}" class="card-img-top" alt=".." align="center">
+
+
+							  			<img style="height: 100px; width: 100px; margin: 20px" src="../storage/app/{{$entrenador->avatar}}" class="card-img-top rounded-circle" alt=".." align="center">
 								    	<h5 class="card-title" align="center">{{$entrenador->name}}</h5>
 								    	<p class="card-text" align="center">{{$entrenador->email}}</p>
-								    	<a href="../../trainer/details/{{$entrenador->id}}" 
-								    	class="btn btn-primary">Ver Perfil Completo</a>
+								    	<a href="./trainer/{{$entrenador->id}}" 
+								    	class="btn btn-primary">Ver Detalles</a>
 							  		
 							  		</div>
 							</div>
