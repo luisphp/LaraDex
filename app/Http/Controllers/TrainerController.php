@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Trainer;
+use Illuminate\Support\Str;
 
 class TrainerController extends Controller
 {
@@ -56,14 +57,34 @@ class TrainerController extends Controller
                     
                   }
 
-                  $trainer = new Trainer();
+
+                  //Aqui si el correo ya esta registrado muestra el mensaje de error
+
+                  try {
+
+                    $trainer = new Trainer();
                   
                     $trainer->name = $request->input('nombre');
                     $trainer->email = $request->input('correo');
                     $trainer->avatar = $file;
+                    $trainer->slug = Str::slug($trainer->name, '-');
                     $trainer->save();
 
+
                     return 'Saved';
+
+
+             
+        } catch(\Illuminate\Database\QueryException $e){
+            $errorCode = $e->errorInfo[1];
+            if($errorCode == '1062'){
+                return 'Duplicate Entry';
+            }
+        }
+
+                  
+
+                    
 
                     
 
@@ -76,11 +97,12 @@ class TrainerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        // En el caso de que estes buscando por ID debes ingresar la siguiente linea
+        // $variable = Trainer::find($id);
 
-        $detalles = Trainer::find($id);
+        $detalles = Trainer::where('slug', $slug)->first();;
 
         return view ('trainer.trainer_details', compact('detalles'));
     }

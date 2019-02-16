@@ -32,7 +32,7 @@
 							  			<img style="height: 100px; width: 100px; margin: 20px" src="../storage/app/{{$entrenador->avatar}}" class="card-img-top rounded-circle" alt=".." align="center">
 								    	<h5 class="card-title" align="center">{{$entrenador->name}}</h5>
 								    	<p class="card-text" align="center">{{$entrenador->email}}</p>
-								    	<a href="./trainer/{{$entrenador->id}}" 
+								    	<a href="./trainer/{{$entrenador->slug}}" 
 								    	class="btn btn-primary">Ver Detalles</a>
 							  		
 							  		</div>
