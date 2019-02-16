@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAvatarToTrainerTable extends Migration
+class AddSlugToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class AddAvatarToTrainerTable extends Migration
     {
         Schema::table('trainers', function (Blueprint $table) {
             //
-            $table->string('avatar')->after('email')->nullable();
+            $table->string('slug')->after('name')->unique()->nullable();
         });
     }
 
@@ -28,7 +28,7 @@ class AddAvatarToTrainerTable extends Migration
     {
         Schema::table('trainers', function (Blueprint $table) {
             //
-            //$table->dropColumn('avatar');
+            $table->dropColumn('slug');
         });
     }
 }
