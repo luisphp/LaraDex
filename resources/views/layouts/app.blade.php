@@ -39,6 +39,9 @@
 
 	<div style="margin-top: 90px" class="container">
 
+@include('layouts.flash-message')
+
+
 @yield('content')
 
 </div>

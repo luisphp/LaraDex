@@ -6,17 +6,17 @@
 
 @section('content')
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="../../">Home</a></li>
+    <li class="breadcrumb-item"><a href="../">Trainer</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Create Trainer</li>
+  </ol>
+</nav>
 
-<br>
-<br>
 
-
-<h1> Cargar entrenador </h1>
+<h2 style="margin: 10px;"> Cargar entrenador </h2>
 	
-<br>
-
-
-
 
 <form class="form-group" method="POST" action="../trainer" enctype="multipart/form-data">
 
@@ -90,14 +90,3 @@
 </form>
 
 @endsection
-
-
-
-	
-
-
-
-
-</body>
-
-</html>

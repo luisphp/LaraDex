@@ -6,6 +6,13 @@
 
 @section('content')
 
+	<nav aria-label="breadcrumb">
+	  <ol class="breadcrumb">
+	    <li class="breadcrumb-item"><a href="./">Home</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Trainer</li>
+	  </ol>
+	</nav>
+
 	<h1 style="margin-top: 20px" align="center"> Lista de Entrenadores </h1>
 
 
@@ -33,7 +40,9 @@
 								    	<h5 class="card-title" align="center">{{$entrenador->name}}</h5>
 								    	<p class="card-text" align="center">{{$entrenador->email}}</p>
 								    	<a href="./trainer/{{$entrenador->slug}}" 
-								    	class="btn btn-primary">Ver Detalles</a>
+								    	class="btn btn-primary">Ver Detalles</a> 
+								    	<a href="./trainer/{{$entrenador->slug}}/edit" 
+								    	class="btn btn-outline-secondary">Editar</a>
 							  		
 							  		</div>
 							</div>

@@ -15,8 +15,7 @@ class TrainerController extends Controller
      */
     public function index()
     {
-        //
-
+    
         $trainers = Trainer::all();
 
         return view ('trainer.index', compact('trainers'));    }
@@ -28,7 +27,7 @@ class TrainerController extends Controller
      */
     public function create()
     {
-        //
+        
         return view ('trainer.create');
     }
 
@@ -53,7 +52,7 @@ class TrainerController extends Controller
 
                   if($request->hasFile('subir-avatar')){
                     $file = $request->file('subir-avatar')->store('public');;
-                    //$name = sha1(time());
+                
                     
                   }
 
@@ -113,9 +112,13 @@ class TrainerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        
+        $detalles = Trainer::where('slug', $slug)->first();;
+
+        return view ('trainer.edit_trainer', compact('detalles'));
+
     }
 
     /**
@@ -125,9 +128,29 @@ class TrainerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Trainer $trainer)
     {
-        //
+        
+
+                        if($request->hasFile('subir-avatar')){
+                            $file = $request->file('subir-avatar')->store('public');
+                            
+                            
+                          }else { $file = $trainer->avatar;}
+
+                           
+
+                            $trainer->fill(['name' => $request->input('nombre'),
+                                            'avatar' => $file,
+                                            'slug' => Str::slug($request->input('nombre'), '-'),
+                                            'updated_at'=> time() 
+                                            ]);
+
+                            $trainer->save();
+
+                            return 'Updated!';
+
+
     }
 
     /**
