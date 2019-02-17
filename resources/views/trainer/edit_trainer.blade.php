@@ -8,6 +8,8 @@
 
 @section('content')
 
+<!-- BreadCrumb -->
+
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
 	    <li class="breadcrumb-item"><a href="../../">Home</a></li>
@@ -16,20 +18,59 @@
 	  </ol>
 	</nav>
 
+<!-- Titulo -->
 
-<h3 class="mx-auto" style="width: 500px;">Actualizar entrenador</h3>
+<h3 class="mx-auto" style="width: 300px;">Actualizar entrenador</h3>
 
-<div class="mx-auto" style="width: 300px; margin-top: 20px;">
+    <div class="mx-auto" style= "margin-top: 20px; width: 100px;">
 
-	<img class="mx-auto"  >
+<!-- Imagen Actual del Entrenador-->
 
-	<img src="../../../storage/app/{{$detalles->avatar}}" class="rounded mx-auto" alt="image">
+	   <img style="height: 100px; width: 100px; " src="../../../storage/app/{{$trainer->avatar}}" class="rounded-circle mx-auto" alt="image">
 	
-	</div>
+	   </div>
+
+     <!-- Formulario usando Laravel Collective con la clase model-->
+
+     {!! Form::model($trainer, ['route' => ['trainer.update', $trainer], 'method' => 'PUT', 'files' => 'true']) !!}
+          
+         <div class="form-group">
+          
+          {!! Form::label('name', 'Nombre') !!}
+          {!! Form::text('name', null, ['class' => 'form-control']) !!}
+
+         </div>
+
+          <div class="form-group">
+          
+          {!! Form::label('email', 'Email') !!}
+          {!! Form::text('email', null,['class' => 'form-control', 'disabled' => 'disabled']) !!}
+
+         </div>
+
+         <div class="form-group">
+          
+          {!!  Form::label('subir-avatar', 'Avatar') !!}
+          {!!  Form::file('subir-avatar') !!}
+
+         </div>
+
+         <div class="form-group">
+          
+          {!!  Form::submit('Actualizar',['class' => 'btn btn-primary']) !!}
+
+         </div>
+
+
+    {!! Form::close() !!}
+
+
 	
+<!-- Formulario usando HTML solo tradicional -->
 
+<!--
 
-<form class="form-group" method="POST" action="../../trainer/{{$detalles->slug}}" enctype="multipart/form-data">
+<form class="form-group" method="POST" action="../../trainer/" enctype="multipart/form-data">
 
 	@method('PUT')
 	@csrf
@@ -43,7 +84,7 @@
         <div class="col-sm-10">
 
 
-          <input type="text" class="form-control" value="{{$detalles->name}}" name="nombre" placeholder="Nombre de Entrenador">
+          <input type="text" class="form-control" value="" name="nombre" placeholder="Nombre de Entrenador">
 
 
         </div>
@@ -57,7 +98,7 @@
 
             <div class="col-sm-10"> 
 
-              <input disabled="disabled" type="text" class="form-control" name="correo" placeholder="Ingrese Correo" value="{{$detalles->email}}">
+              <input disabled="disabled" type="text" class="form-control" name="correo" placeholder="Ingrese Correo" value="">
 
             </div>
       </div>
@@ -89,5 +130,5 @@
         </div>
 
 </form>
-
+-->
 @endsection

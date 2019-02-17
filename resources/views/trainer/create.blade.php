@@ -15,7 +15,7 @@
 </nav>
 
 
-<h2 style="margin: 10px;"> Cargar entrenador </h2>
+<h2 style="margin: 20px;"> Cargar entrenador </h2>
 
 
 <!-- Forma HTML actual de crear un formulario con Laravel Collective-->
@@ -24,8 +24,28 @@
           
          <div class="form-group">
           
-          {!!Form::label('Name', 'Nombre') !!}
-          {!!Form::text('name', 'null')| !!}
+          {!! Form::label('name', 'Nombre') !!}
+          {!! Form::text('name', null, ['class' => 'form-control']) !!}
+
+         </div>
+
+          <div class="form-group">
+          
+          {!! Form::label('email', 'Email') !!}
+          {!! Form::text('email', null,['class' => 'form-control']) !!}
+
+         </div>
+
+         <div class="form-group">
+          
+          {!!  Form::label('subir-avatar', 'Avatar') !!}
+          {!!  Form::file('subir-avatar') !!}
+
+         </div>
+
+         <div class="form-group">
+          
+          {!!  Form::submit('Guardar',['class' => 'btn btn-primary']) !!}
 
          </div>
     

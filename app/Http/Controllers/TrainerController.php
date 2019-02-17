@@ -50,10 +50,15 @@ class TrainerController extends Controller
        // return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
 
 
+
                   if($request->hasFile('subir-avatar')){
-                    $file = $request->file('subir-avatar')->store('public');;
-                
-                    
+
+                    $file = $request->file('subir-avatar')->store('public');
+            
+                  }else{
+
+                    $file = '/public/default.jpg';
+                  
                   }
 
 
@@ -63,8 +68,8 @@ class TrainerController extends Controller
 
                     $trainer = new Trainer();
                   
-                    $trainer->name = $request->input('nombre');
-                    $trainer->email = $request->input('correo');
+                    $trainer->name = $request->input('name');
+                    $trainer->email = $request->input('email');
                     $trainer->avatar = $file;
                     $trainer->slug = Str::slug($trainer->name, '-');
                     $trainer->save();
@@ -112,12 +117,16 @@ class TrainerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($slug)
+    public function edit(Trainer $trainer)
     {
         
-        $detalles = Trainer::where('slug', $slug)->first();;
+        //En el caso de que no usar el implicit binding recuerda que arriba debes cambioar el Trainer $trainer
+        //Por $slug o ID segun como lo necesites y luego usar la linea de abajo
+        //$detalles = Trainer::where('slug', $slug)->first();;
 
-        return view ('trainer.edit_trainer', compact('detalles'));
+
+
+        return view ('trainer.edit_trainer', compact('trainer'));
 
     }
 
@@ -140,10 +149,13 @@ class TrainerController extends Controller
 
                            
 
-                            $trainer->fill(['name' => $request->input('nombre'),
+                            $trainer->fill([
+
+                                            'name' => $request->input('name'),
                                             'avatar' => $file,
-                                            'slug' => Str::slug($request->input('nombre'), '-'),
+                                            'slug' => Str::slug($request->input('name'), '-'),
                                             'updated_at'=> time() 
+                                           
                                             ]);
 
                             $trainer->save();

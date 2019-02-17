@@ -27,7 +27,7 @@
 							  			<img style="height: 100px; width: 100px; margin: 20px" src="../../storage/app/{{$detalles->avatar}}" class="card-img-top rounded-circle" alt=".." align="center">
 								    	<h5 class="card-title" align="center">{{$detalles->name}}</h5>
 								    	<p class="card-text" align="center">{{$detalles->email}}</p>
-								    	<a href="./trainer/{{$detalles->slug}}/edit" 
+								    	<a href="../../trainer/{{$detalles->slug}}/edit" 
 								    	class="btn btn-outline-secondary">Editar</a>
 								    
 								    	
