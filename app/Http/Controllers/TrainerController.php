@@ -58,8 +58,7 @@ class TrainerController extends Controller
 
 
                   //Aqui si el correo ya esta registrado muestra el mensaje de error
-                  //Laptop Samsung
-
+                  
                   try {
 
                     $trainer = new Trainer();

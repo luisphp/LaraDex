@@ -16,7 +16,28 @@
 
 
 <h2 style="margin: 10px;"> Cargar entrenador </h2>
-	
+
+
+<!-- Forma HTML actual de crear un formulario con Laravel Collective-->
+
+      {!! Form::open(['route' => 'trainer.store', 'method' => 'POST', 'files' => 'true']) !!}
+          
+         <div class="form-group">
+          
+          {!!Form::label('Name', 'Nombre') !!}
+          {!!Form::text('name', 'null')| !!}
+
+         </div>
+    
+    
+
+      {!! Form::close() !!}                                                                                           
+
+
+
+
+<!-- Forma HTML tradicional de crear un formulario-->
+	<!--
 
 <form class="form-group" method="POST" action="../trainer" enctype="multipart/form-data">
 
@@ -88,5 +109,6 @@
         </div>
 
 </form>
+-->
 
 @endsection
