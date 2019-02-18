@@ -50,6 +50,17 @@ class TrainerController extends Controller
        // return 'Hola '.$request->input('nombre').' con el correo '.$request->input('correo');
 
 
+        //Aqui se especifican las validaciones
+
+        $validatedData = $request->validate(
+
+            ['name' => 'required|max: 10',
+             'email' => 'required|max:10',
+             'avatar' => 'image'
+            ]);
+
+
+
 
                   if($request->hasFile('subir-avatar')){
 
