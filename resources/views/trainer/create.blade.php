@@ -18,6 +18,33 @@
 <h2 style="margin: 20px;"> Cargar entrenador </h2>
 
 
+
+
+<!-- En esta seccion manejamos los errores segun las excepciones que espeficamos en el controller-->
+
+    @if ($errors->any())
+
+        @foreach($errors->all() as $error)
+
+                <div class="alert alert-danger">
+                          <ul>
+                          
+                                    <li>
+
+                                {{ $error }}
+                                    </li>
+
+                        </ul>
+                </div>
+          
+         
+
+              
+        @endforeach
+
+    @endif
+
+
 <!-- Forma HTML actual de crear un formulario con Laravel Collective-->
 
       {!! Form::open(['route' => 'trainer.store', 'method' => 'POST', 'files' => 'true']) !!}

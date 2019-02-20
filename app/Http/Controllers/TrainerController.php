@@ -51,6 +51,7 @@ class TrainerController extends Controller
 
 
         //Aqui se especifican las validaciones
+        //Se debe especificar en la vista los mensajes
 
         $validatedData = $request->validate(
 
