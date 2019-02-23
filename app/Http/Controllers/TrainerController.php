@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Trainer;
 use Illuminate\Support\Str;
+use App\Http\Requests\StoreTrainerRequest;
 
 class TrainerController extends Controller
 {
@@ -37,7 +38,7 @@ class TrainerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTrainerRequest $request)
     {
         //Mediante la utilizacion del este metodo $request->all(); podemo ver toda la informacion que enviamos.
         
@@ -53,6 +54,13 @@ class TrainerController extends Controller
         //Aqui se especifican las validaciones
         //Se debe especificar en la vista los mensajes
 
+
+        /*
+
+        Estas lineas de codigo se usan aqui (en el controlador) en el caso de que no usems un FormRequest
+        (Recuerda que estos seguardan en el directorio App/Htpp/Request/)
+
+
         $validatedData = $request->validate(
 
             ['name' => 'required|max: 10',
@@ -60,7 +68,7 @@ class TrainerController extends Controller
              'avatar' => 'image'
             ]);
 
-
+        */
 
 
                   if($request->hasFile('subir-avatar')){
