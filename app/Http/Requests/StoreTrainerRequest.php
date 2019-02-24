@@ -27,7 +27,7 @@ class StoreTrainerRequest extends FormRequest
             //
 
             'name' => 'required|max: 10',
-             'email' => 'required|max:10',
+             'email' => 'required',
              'avatar' => 'image'
 
         ];

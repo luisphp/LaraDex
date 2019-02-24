@@ -57,7 +57,7 @@ class TrainerController extends Controller
 
         /*
 
-        Estas lineas de codigo se usan aqui (en el controlador) en el caso de que no usems un FormRequest
+        Estas lineas de codigo se usan aqui (en el controlador) en el caso de que no uses un FormRequest
         (Recuerda que estos seguardan en el directorio App/Htpp/Request/)
 
 
@@ -95,14 +95,17 @@ class TrainerController extends Controller
                     $trainer->save();
 
 
-                    return 'Saved';
+                    return redirect()->route('trainer.index')->with('status','Registro Exitoso!');
+                    //return 'Saved';
 
 
              
         } catch(\Illuminate\Database\QueryException $e){
             $errorCode = $e->errorInfo[1];
             if($errorCode == '1062'){
-                return 'Duplicate Entry';
+                //return 'Duplicate Entry';
+
+                return redirect()->route('trainer.index')->with('status','Correo Duplicado');
             }
         }
 
@@ -180,7 +183,10 @@ class TrainerController extends Controller
 
                             $trainer->save();
 
-                            return 'Updated!';
+                            
+                            return redirect()->route('trainer.show',[$request->slug])->with('status', '¡Actualizacion Exitosa!');
+                            //return 'Updated!';
+
 
 
     }
@@ -191,8 +197,21 @@ class TrainerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Trainer $trainer)
     {
-        //
+        /*
+        Recuerda siempre verificar que es lo que esta llegando al controller usando...
+
+        return $trainer;
+
+        */
+
+        $trainer->delete();
+
+        return redirect()->route('trainer.index')->with('status','Entrenador Eliminado');
+
+
+
+       // return 'Deleted';
     }
 }

@@ -80,3 +80,7 @@ Route::get('/prueba/{nombre}','TestController@saludo');
 //Para acceder a un controlador de tipo resource 
 Route::resource('trainer','TrainerController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

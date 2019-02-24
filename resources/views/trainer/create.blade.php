@@ -22,27 +22,28 @@
 
 <!-- En esta seccion manejamos los errores segun las excepciones que espeficamos en el controller-->
 
-    @if ($errors->any())
+       @if (session('status'))
 
-        @foreach($errors->all() as $error)
+          @if(session('status')=='Registro Exitoso!')
 
-                <div class="alert alert-danger">
-                          <ul>
-                          
-                                    <li>
+          <div class="alert alert-success">
 
-                                {{ $error }}
-                                    </li>
+            {{ session('status') }}
 
-                        </ul>
-                </div>
+          </div>
+
+            @else
+
+          <div class="alert alert-danger">
+
+            {{ session('status') }}
+
+          </div>
+
+          @endif
+
           
-         
-
-              
-        @endforeach
-
-    @endif
+        @endif
 
 
 <!-- Forma HTML actual de crear un formulario con Laravel Collective-->
