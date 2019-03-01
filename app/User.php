@@ -14,6 +14,8 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
+     /*Por ultimo esta funcion nos indica si el usuario esta autorizado para ver esa seccion*/
+
     public function authorizeRoles($roles){
 
         if($this->hasAnyRole($roles)){
@@ -22,11 +24,15 @@ class User extends Authenticatable
 
         }
 
-        abort(401,'This action is unauthorized');
+        abort(401,'Esta accion no esta autorizada');
 
     }
 
+    /*En esta seccion verificamos si tenemos un role para ese usuario*/
+
     public function hasAnyRole($roles){
+
+    /*En esta seccion verificamos si se nos esta pasando una arreglo de roles*/
 
         if(is_array($roles)){
 
@@ -48,6 +54,8 @@ class User extends Authenticatable
         }
 
     }
+
+     /*En esta seccion verificamos si el usuario logeado tiene el role que se nos pase por el request*/
 
     public function hasRole($role){
 
