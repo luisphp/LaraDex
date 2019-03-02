@@ -81,6 +81,11 @@ Route::get('/prueba/{nombre}','TestController@saludo');
 Route::resource('trainer','TrainerController');
 
 
+
+//Ruta para prokemons
+Route::resource('pokemons','PokemonController');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
