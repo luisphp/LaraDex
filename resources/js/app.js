@@ -22,6 +22,9 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+// Para utilizar un nuevo componente debemos regitrarlo en esta seccion asi como esta el de arriba que es el de ejemplo
+
+Vue.component('pokemons-component', require('./components/PokemonsComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

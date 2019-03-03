@@ -1779,7 +1779,89 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PokemonsComponent.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PokemonsComponent.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      pokemons: [{
+        id: 1,
+        name: "Pikachu",
+        element: "Electric"
+      }, {
+        id: 2,
+        name: "Squirtel",
+        element: "Guater"
+      }, {
+        id: 3,
+        name: "Charizal",
+        element: "Fire"
+      }]
+    };
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -36840,13 +36922,15 @@ var staticRenderFns = [
       _c("div", { staticClass: "row justify-content-center" }, [
         _c("div", { staticClass: "col-md-8" }, [
           _c("div", { staticClass: "card card-default" }, [
+            _c("h2", [_vm._v(" Lista de  Pokemons")]),
+            _vm._v(" "),
             _c("div", { staticClass: "card-header" }, [
               _vm._v("Example Component")
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _vm._v(
-                "\n                    I'm an example component.\n                "
+                "\n                        Lista de pokemons, no refresca\n                    "
               )
             ])
           ])
@@ -36855,6 +36939,100 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PokemonsComponent.vue?vue&type=template&id=2832b582&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PokemonsComponent.vue?vue&type=template&id=2832b582& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "row", staticStyle: { "margin-top": "20px" } },
+    _vm._l(_vm.pokemons, function(pokemon) {
+      return _c(
+        "div",
+        {
+          staticClass: "col-sm",
+          staticStyle: { margin: "20px" },
+          attrs: { align: "center" }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "card text-center",
+              staticStyle: { width: "18rem" }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "card-body", attrs: { align: "center" } },
+                [
+                  _c("img", {
+                    staticClass: "card-img-top rounded-circle",
+                    staticStyle: {
+                      height: "100px",
+                      width: "100px",
+                      margin: "20px"
+                    },
+                    attrs: { src: "", alt: "image", align: "center" }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "h5",
+                    { staticClass: "card-title", attrs: { align: "center" } },
+                    [_vm._v(_vm._s(pokemon.name))]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "card-text", attrs: { align: "center" } },
+                    [_vm._v(_vm._s(pokemon.element))]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-sm",
+                      attrs: { href: "./trainer/" }
+                    },
+                    [_vm._v("Ver Detalles")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-outline-secondary btn-sm",
+                      attrs: { href: "./trainer//edit" }
+                    },
+                    [_vm._v("Editar")]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      )
+    }),
+    0
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -36977,7 +37155,7 @@ function normalizeComponent (
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.6.7
+ * Vue.js v2.6.8
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
@@ -37455,7 +37633,7 @@ var config = ({
  * using https://www.w3.org/TR/html53/semantics-scripting.html#potentialcustomelementname
  * skipping \u10000-\uEFFFF due to it freezing up PhantomJS
  */
-var unicodeLetters = 'a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD';
+var unicodeRegExp = /a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD/;
 
 /**
  * Check if a string starts with $ or _
@@ -37480,7 +37658,7 @@ function def (obj, key, val, enumerable) {
 /**
  * Parse simple path.
  */
-var bailRE = new RegExp(("[^" + unicodeLetters + ".$_\\d]"));
+var bailRE = new RegExp(("[^" + (unicodeRegExp.source) + ".$_\\d]"));
 function parsePath (path) {
   if (bailRE.test(path)) {
     return
@@ -38384,7 +38562,7 @@ function checkComponents (options) {
 }
 
 function validateComponentName (name) {
-  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + unicodeLetters + "]*$")).test(name)) {
+  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + (unicodeRegExp.source) + "]*$")).test(name)) {
     warn(
       'Invalid component name: "' + name + '". Component names ' +
       'should conform to valid custom element name in html5 specification.'
@@ -40588,17 +40766,21 @@ function resolveAsyncComponent (
     return factory.resolved
   }
 
+  var owner = currentRenderingInstance;
+  if (isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
+    // already pending
+    factory.owners.push(owner);
+  }
+
   if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
     return factory.loadingComp
   }
 
-  var owner = currentRenderingInstance;
-  if (isDef(factory.owners)) {
-    // already pending
-    factory.owners.push(owner);
-  } else {
+  if (!isDef(factory.owners)) {
     var owners = factory.owners = [owner];
-    var sync = true;
+    var sync = true
+
+    ;(owner).$on('hook:destroyed', function () { return remove(owners, owner); });
 
     var forceRender = function (renderCompleted) {
       for (var i = 0, l = owners.length; i < l; i++) {
@@ -42378,7 +42560,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.6.7';
+Vue.version = '2.6.8';
 
 /*  */
 
@@ -46180,7 +46362,7 @@ var isNonPhrasingTag = makeMap(
 // Regular Expressions for parsing tags and attributes
 var attribute = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/;
 var dynamicArgAttribute = /^\s*((?:v-[\w-]+:|@|:|#)\[[^=]+\][^\s"'<>\/=]*)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/;
-var ncname = "[a-zA-Z_][\\-\\.0-9_a-zA-Z" + unicodeLetters + "]*";
+var ncname = "[a-zA-Z_][\\-\\.0-9_a-zA-Z" + (unicodeRegExp.source) + "]*";
 var qnameCapture = "((?:" + ncname + "\\:)?" + ncname + ")";
 var startTagOpen = new RegExp(("^<" + qnameCapture));
 var startTagClose = /^\s*(\/?)>/;
@@ -46442,7 +46624,7 @@ function parseHTML (html, options) {
         ) {
           options.warn(
             ("tag <" + (stack[i].tag) + "> has no matching end tag."),
-            { start: stack[i].start }
+            { start: stack[i].start, end: stack[i].end }
           );
         }
         if (options.end) {
@@ -46479,7 +46661,7 @@ var dynamicArgRE = /^\[.*\]$/;
 
 var argRE = /:(.*)$/;
 var bindRE = /^:|^\.|^v-bind:/;
-var modifierRE = /\.[^.]+/g;
+var modifierRE = /\.[^.\]]+(?=[^\]]*$)/g;
 
 var slotRE = /^v-slot(:|$)|^#/;
 
@@ -46656,7 +46838,7 @@ function parse (
     shouldDecodeNewlinesForHref: options.shouldDecodeNewlinesForHref,
     shouldKeepComment: options.comments,
     outputSourceRange: options.outputSourceRange,
-    start: function start (tag, attrs, unary, start$1) {
+    start: function start (tag, attrs, unary, start$1, end) {
       // check namespace.
       // inherit parent ns if there is one
       var ns = (currentParent && currentParent.ns) || platformGetTagNamespace(tag);
@@ -46675,6 +46857,7 @@ function parse (
       {
         if (options.outputSourceRange) {
           element.start = start$1;
+          element.end = end;
           element.rawAttrsMap = element.attrsList.reduce(function (cumulated, attr) {
             cumulated[attr.name] = attr;
             return cumulated
@@ -48159,7 +48342,7 @@ function genScopedSlots (
   // components with only scoped slots to skip forced updates from parent.
   // but in some cases we have to bail-out of this optimization
   // for example if the slot contains dynamic names, has v-if or v-for on them...
-  var needsForceUpdate = Object.keys(slots).some(function (key) {
+  var needsForceUpdate = el.for || Object.keys(slots).some(function (key) {
     var slot = slots[key];
     return (
       slot.slotTargetDynamic ||
@@ -48985,7 +49168,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
+Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default); // Para utilizar un nuevo componente debemos regitrarlo en esta seccion asi como esta el de arriba que es el de ejemplo
+
+Vue.component('pokemons-component', __webpack_require__(/*! ./components/PokemonsComponent.vue */ "./resources/js/components/PokemonsComponent.vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49120,6 +49305,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PokemonsComponent.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/PokemonsComponent.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PokemonsComponent_vue_vue_type_template_id_2832b582___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PokemonsComponent.vue?vue&type=template&id=2832b582& */ "./resources/js/components/PokemonsComponent.vue?vue&type=template&id=2832b582&");
+/* harmony import */ var _PokemonsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PokemonsComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/PokemonsComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PokemonsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PokemonsComponent_vue_vue_type_template_id_2832b582___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PokemonsComponent_vue_vue_type_template_id_2832b582___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PokemonsComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/PokemonsComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/PokemonsComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PokemonsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PokemonsComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PokemonsComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PokemonsComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/PokemonsComponent.vue?vue&type=template&id=2832b582&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/PokemonsComponent.vue?vue&type=template&id=2832b582& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PokemonsComponent_vue_vue_type_template_id_2832b582___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PokemonsComponent.vue?vue&type=template&id=2832b582& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PokemonsComponent.vue?vue&type=template&id=2832b582&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PokemonsComponent_vue_vue_type_template_id_2832b582___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PokemonsComponent_vue_vue_type_template_id_2832b582___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

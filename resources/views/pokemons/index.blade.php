@@ -1,14 +1,13 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
-@section('content');
-
-<h2 class=""> Lista de Pokemons</h2>
+@section('content')
 
 
-<example-componet>
+
+<pokemons-component>
 	
 
-</example-componet>
+</pokemons-component>
 
 
 @endsection

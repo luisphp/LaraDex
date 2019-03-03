@@ -17,11 +17,21 @@ class TrainerController extends Controller
     public function index(Request $request)
     {
 
-        $request->user()->authorizeRoles('user','admin');
+       
+        /* La siguiente se utiliza para validar  si el usuario que se logeo tiene el role que estipulamos aqui   */
+
+           $request->user()->authorizeRoles('admin');
+     
+
+        
     
         $trainers = Trainer::all();
 
-        return view ('trainer.index', compact('trainers'));    }
+        return view ('trainer.index', compact('trainers')); 
+
+        
+
+           }
 
     /**
      * Show the form for creating a new resource.
